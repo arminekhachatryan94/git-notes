@@ -6,7 +6,7 @@ cd repoA
 git remote rename origin origin2
 git remote add origin https://github.com/username/repoB.git
 git fetch --depth=(number of commits) origin2 master
-git push -u origin master
+git push -u origin master --force
 ```
 #### delete a file from git history
 ```
