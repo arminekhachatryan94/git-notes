@@ -11,7 +11,7 @@ git fetch --depth=(number of commits) origin2 master
 git push -u origin master --force
 
 #Copy all branches
-for remote in $(git branch -r); do git checkout ${remote##origin2/}; git fetch --depth=400 origin2 ${remote##origin2/}; git push -u origin ${remote##origin2/} --force; done
+for remote in $(git branch -r); do git checkout ${remote##origin2/}; git fetch --depth=(number of commits) origin2 ${remote##origin2/}; git push -u origin ${remote##origin2/} --force; done
 ```
 
 #### delete a file from git history
