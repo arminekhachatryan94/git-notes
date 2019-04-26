@@ -6,9 +6,11 @@ cd repoA
 git remote rename origin origin2
 git remote add origin https://github.com/username/repoB.git
 
+#Copy master branch only
 git fetch --depth=(number of commits) origin2 master
 git push -u origin master --force
-OR
+
+#Copy all branches
 for remote in $(git branch -r); do git checkout ${remote##origin2/}; git fetch --depth=400 origin2 ${remote##origin2/}; git push -u origin ${remote##origin2/} --force; done
 ```
 
